@@ -8,7 +8,6 @@
 /.bundle
 coverage
 simplecov
-
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -36,4 +35,5 @@ simplecov
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
 
