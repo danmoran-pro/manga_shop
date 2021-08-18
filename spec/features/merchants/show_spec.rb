@@ -15,15 +15,18 @@ RSpec.describe 'merchants index page', type: :feature do
       expect(page).to have_link(@merchant_2.name)
       expect(page).to have_link(@merchant_3.name)
     end
-
-    it 'I can STILL see a list of merchants in the system' do
+    
+    it 'I can can see a specifc merchants information' do
       visit "/merchants/#{@merchant_1.id}"
-
-      expect(page).to have_link(@merchant_1.name)
-      expect(page).to have_link(@merchant_1.address)
-      expect(page).to have_link(@merchant_1.city)
-      expect(page).to have_link(@merchant_1.state)
-      expect(page).to have_link(@merchant_1.zip)
-    end
+      
+      
+      expect(current_path).to eq("/merchants/#{@merchant_1.id}")
+      
+      expect(page).to have_content("#{@merchant_1.name}")
+      expect(page).to have_content("#{@merchant_1.address}")
+      expect(page).to have_content("#{@merchant_1.city}")
+      expect(page).to have_content("#{@merchant_1.state}")
+      expect(page).to have_content("#{@merchant_1.zip}")
+    end 
   end 
 end 
