@@ -6,8 +6,6 @@ RSpec.describe 'merchant index page', type: :feature do
       @merchant_1 = create(:random_merchant)
       @merchant_2 = create(:random_merchant)
       @merchant_3 = create(:random_merchant)
-      
-      
     end
     
     it 'I can see a link to create a new merchant' do
